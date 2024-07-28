@@ -1,28 +1,29 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import "./App.css";
+import Card from "./Card"
+import Input from "./Input";
+import Themeswitcher from "./Themeswitch";
+import Tabs from "./Tabs";
 
 function App() {
-  const [message, setMessage] = useState("");
+  const [prompt, setPrompt] = useState("");
+  const [activeTab, setActiveTab] = useState("translation_en_to_de");
 
-  useEffect(() => {
-    const requestBody = JSON.stringify({
-      task: "translation_en_to_de",
-      prompt: "hello, how are you",
-    });
-    fetch("http://localhost:5000/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: requestBody,
-    })
-      .then((res) => res.json())
-      .then((data) => setMessage(data.response));
-  }, []);
-
+  const handlePromptChange = (newPrompt) => {
+    setPrompt(newPrompt);
+  };
+  const handleTabChange = (newTab) => {
+    setActiveTab(newTab);
+  };
+  
   return (
-    <div className="App">
-      <h1>{message}</h1>
+    <div className="App min-h-screen flex flex-col items-center justify-center p-4">
+      <div className="w-full max-w-md space-y-4">
+        <Themeswitcher/>
+        <Tabs activeTab={activeTab} onTabChange={handleTabChange}/>
+        <Input prompt={prompt} onPromptChange={handlePromptChange}/>
+        <Card prompt={prompt} task={activeTab}/>
+      </div>
     </div>
   );
 }
