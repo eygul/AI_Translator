@@ -99,3 +99,10 @@ The AI Translator Application is a powerful and user-friendly tool that leverage
 
 ## Contributing
 Contributions are welcome! Please fork this repository and submit a pull request for any enhancements, bug fixes, or new features.
+
+## Demo
+![image](https://github.com/user-attachments/assets/cb58d2bd-3781-4238-8282-ab28c77fe5b6)
+![image](https://github.com/user-attachments/assets/b70077c2-520b-49df-b817-cee111364698)
+![image](https://github.com/user-attachments/assets/f5da89cf-d36a-4e2c-9f5e-dccd14e9b439)
+
+
