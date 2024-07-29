@@ -40,7 +40,7 @@ The AI Translator Application is a powerful and user-friendly tool that leverage
 2. Clone the repository:
     ```bash
     git clone https://github.com/your-username/AI_Translator.git
-    cd ai-translator/backend
+    cd AI_Translator/backend
     ```
 
 3. Create and activate a virtual environment:
